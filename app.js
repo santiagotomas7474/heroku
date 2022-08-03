@@ -84,7 +84,7 @@ app.use((error, req, res, next) => {
   res.status(error.status).json({ status: error.status, message: "no se pudo cargar la pagina" })
 })
 
-app.listen(PORT, (err) => {
+app.listen(process.env.PORT || PORT, (err) => {
   err
     ? console.log("explotó todo 😫")
     : console.log(`Servidor corre en http://localhost:${PORT}`);
