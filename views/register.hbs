@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="css/cssTwo.css">
+</head>
+{{>nav}}
+<article class="fondo">
+<div class="container mt-5 text-white">
+    <div class="row">
+        <form class="container col-6 bg-dark py-4 col-11 col-md-8 col-lg-6" action="register" method="POST">
+            <div class="mb-3">
+                <label for="user" class="form-label">Usuario</label>
+                <input name="user" type="text" class="form-control" id="user" autocomplete="username" value="{{#if valores}}{{valores.user}}{{/if}}">
+            </div>
+            <div class="mb-3">
+                <label for="mail" class="form-label">E-mail</label>
+                <input name="mail" type="text" class="form-control" id="mail" value="{{#if valores}}{{valores.mail}}{{/if}}" >
+            </div>
+            <div class="mb-3">
+                <label for="pass" class="form-label">Constraseña</label>
+                <input name="pass" type="password" class="form-control" id="pass" autocomplete="current-password" value="{{#if valores}}{{valores.pass}}{{/if}}">
+            </div>    
+            <button type="submit" class="btn btn-primary ">Submit</button>
+
+                <hr>
+{{#if validaciones  }}
+    {{#each validaciones}}                
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <strong>{{msg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+    {{/each}}
+{{/if}}</form>
+</div>
+</div>
+</article>
+        

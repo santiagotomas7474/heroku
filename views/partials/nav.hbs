@@ -1,0 +1,19 @@
+  <nav class="p-3">
+    <div class="container">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="title1" class="nav-link px-2 text-secondary">Inicio</a></li>
+          <li><a href="react" class="title" class="nav-link px-2">Productos</a></li>
+          <li><a href="contact" class="title" class="nav-link px-2">Contactanos</a></li>
+           <li><a href="react/cart" id="icon" class="material-icons-round">shopping_cart</a></li>
+        </ul>
+        <div class="text-end">
+            {{#if user}}
+            <button type="button" id="out" class="btn btn-warning me-2"</button><a class="none"  href="/products">Admin</a></button>
+          
+           <button type="button" id="out" class="btn btn-danger"</button><a class="none" href="login/logout">Salir</a></button>
+            {{else}}
+                <button type="button" id="log" class="btn btn-outline-light "</button><a class="none" href="login">Login</a></button>
+                <button type="button" id="sign" class="btn btn-warning"</button><a class="none" href="register">Registrar</a></button>
+            {{/if}}
+        </div>
+    </nav>

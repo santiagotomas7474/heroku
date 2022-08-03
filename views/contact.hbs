@@ -1,0 +1,31 @@
+<head>
+     <link rel="stylesheet" type="text/css" href="css/cssFour.css">
+</head>
+{{>nav}}
+    <main>
+        <h2>Dejandonos tu mensaje de contacto</h2>
+        <article>--
+            <div class="flex-container">
+            <form action="contact" method="POST">
+                    <hr>
+            <div class="form-floating mb-3">
+                <input type="text" id="name" name="name" class="form-control" id="floatingInput" placeholder="nombre..." autofocus>
+                 <label for="name">Ingrese nombre completo</label>
+            </div>
+            <hr>
+            <div class="form-floating">
+                <input type="text" id="lastName" name="lastName" class="form-control" id="floatingPassword" placeholder="apellido...">
+                <label for="lastName">Ingrese correo</label>
+            </div>
+            <HR></HR>
+                <div class="form-floating">
+                <textarea class="form-control" name="message" id="message" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="message">Escriba su mensaje...</label>
+                </div>
+                <h3>{{message}}</h3>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            </div>
+        </article>
+    </main>
+    

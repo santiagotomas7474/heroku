@@ -1,0 +1,53 @@
+<head>
+     <link rel="stylesheet" type="text/css" href="css/cssThree.css">
+</head>
+{{>nav}}
+ <main>
+</div>
+  {{#if user}}
+                   <tr class="text-center"></tr>
+            <th colspan="7">
+                <a class="non" href="/products/addItem"><button id="add" class="btn btn-primary">Agregar Producto</button></a>
+            </th>
+        </tr>
+        {{/if}}
+   
+    <article class="contain">
+             {{#if user}}
+    {{#each data}}
+            <div class="card" style="width: 18rem;">
+              <img src="{{image}}" class="card-img-top" alt="producto">
+              <div class="card-body">
+                <h5 class="card-title">{{id}} {{name}} {{mark}}</h5>
+                <p class="card-text">{{description}}</p>
+                <p class="card-text">${{price}}</p>
+               <td class="text-center"> 
+                <a href="/products/handleEdit/{{id}}"><button class="btn btn-danger btn-sm">Borrar</button></a>
+                <a href="/products/handleEdit/{{id}}"><button class="btn btn-warning btn-sm">Cambiar</button></a>
+                 </td>
+                
+              </div>
+            </div>
+             {{/each}}
+                {{else}}
+                {{#each data}}
+                <div class="card" style="width: 18rem;">
+                    <img src="{{image}}" class="card-img-top" alt="producto">
+                    <div class="card-body">
+                      <h5 class="card-title">{{id}} {{name}} {{mark}}</h5>
+                      <p class="card-text">{{description}}</p>
+                      <p class="card-text">${{price}}</p>
+            
+                    <h4>Debes iniciar sesión para editar los productos</h4>
+                    </div>
+                </div>
+            {{/each}}
+                 {{/if}}
+
+
+
+                
+    </article>
+    
+    
+  </main>

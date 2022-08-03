@@ -1,0 +1,36 @@
+<body class="bg-dark">
+    {{#if user}}
+    <hr>
+<form class="container col-6 bg-light py-4 col-11 col-md-8 col-lg-6" action="/products/editProduct" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="id" class="form-label">Id del producto, no modificar</label>
+        <input type="text" class="form-control" id="id" readonly name="id"value="{{product.id}}">
+    </div>
+    <div class="mb-3">
+        <label for="mark" class="form-label">Marca del producto</label>
+        <input type="text" class="form-control" id="mark" name="mark" required value="{{product.mark}}">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre del producto</label>
+        <input type="text" class="form-control" id="name" name="name"required value="{{product.name}}">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Descripción del producto</label>
+        <input type="text" class="form-control" id="description" name="description" required value="{{product.description}}">
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Imagen</label>
+        <input type="url"  class="form-control" id="image" name="image" required value="{{product.image}}">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="price" name="price" required value="{{product.price}}">
+    </div>
+    <input type="submit" value="Cambiar" class="btn btn-primary">
+    <a href="/products/deleteProduct/{{product.id}}"><input type="button" value="Borrar" class="btn btn-danger"></a>
+    <a href="/products"><input type="button" value="Cancelar" class="btn btn-secondary"></a>
+</form>
+<hr>
+{{else}}
+{{/if}}
+</body>

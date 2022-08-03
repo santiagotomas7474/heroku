@@ -1,0 +1,44 @@
+
+<body class="bg-dark">
+    {{#if user}}
+<hr>
+<form class="container col-6 bg-light py-4 col-11 col-md-8 col-lg-6" action="addItem" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="mark" class="form-label">Marca del producto</label>
+        <input type="text" class="form-control" id="mark" name="mark" value="{{#if valores}}{{valores.mark}}{{/if}}">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre del producto</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{#if valores}}{{valores.name}}{{/if}}">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Descripción del producto</label>
+        <input class="form-control" id="description" name="description" rows="4" cols="30" maxlength="150" value="{{#if valores}}{{valores.description}}{{/if}}">
+
+
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Url de la imagen del producto</label>
+        <input type="text" class="form-control" id="image" name="image" value="{{#if valores}}{{valores.image}}{{/if}}">
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Precio del producto</label>
+        <input type="text" class="form-control" id="price" name="price" value="{{#if valores}}{{valores.price}}{{/if}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Confirmar</button>
+    <a href="/products"><input type="button" value="Cancelar" class="btn btn-secondary"></a>
+       <hr>
+{{#if validaciones  }}
+    {{#each validaciones}}                
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <strong>{{msg}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+    {{/each}}
+{{/if}}
+{{else}}
+{{/if}}
+</form>
+<hr>
+</body>

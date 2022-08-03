@@ -1,0 +1,175 @@
+nav{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 4em;
+}
+#icon{
+  color: white;
+  padding-left: 5px;
+  text-decoration: none;
+}
+.p-3{
+  background-color: #080808;
+}
+.title{
+  color: white;
+  padding: 1em;
+  text-decoration: none;
+}
+.title1{
+  color:#db4646;
+  padding: 1em;
+  text-decoration: none;
+}
+.none{
+  text-decoration: none;
+  color: #5d7191;
+}
+#log{
+  margin-top: -40px;
+}
+#out{
+  margin-top: -50px;
+}
+#sign{
+  margin-top: -40px;
+}
+header{
+  width: 100%;
+  height: 660px;
+  background-color: black;
+}
+ #tete{
+  margin-top: 45px;
+  position: relative;
+  z-index: 1;
+}
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+main{
+  width: 100%;
+  height: 2750px;
+  background-color: black;
+}
+article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 2090px;
+  background: radial-gradient(circle,#fff,#bbb);
+
+}
+h1{
+  padding-top: 1em;
+
+}
+h2{
+  padding-top: 1.4em;
+  padding-left: 1em;
+}
+#lele{
+  width: 400px;
+  height: 400px;
+}
+@media screen and (min-width: 0) and (max-width: 400px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 190em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 233em;
+  background-color: black;
+}
+}@media screen and (min-width: 400px) and (max-width: 463px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 200em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 240em;
+  background-color: black;
+}
+}@media screen and (min-width: 463px) and (max-width: 563px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 220em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 260em;
+  background-color: black;
+}
+}@media screen and (min-width: 563px) and (max-width: 767px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 240em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 280em;
+  background-color: black;
+}
+}@media screen and (min-width: 767px) and (max-width: 950px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 100em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 150em;
+  background-color: black;
+}
+}@media screen and (min-width: 950px) and (max-width: 1115px){
+  article{
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  height: 115em;
+  background-color: white;
+}
+main{
+  width: 100%;
+  height: 160em;
+  background-color: black;
+}
+}
+@media (min-width: 768px) {
+  #lele{
+  width: 600px;
+  height: 600px;
+  }
+}
