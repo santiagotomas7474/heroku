@@ -133,7 +133,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         image={element.image} />
         <CardContent container spacing={10} >
         <Typography gutterBottom variant="body2" component="div" mt={0} align="left">
-           {element.mark}
+          <h3>{element.mark}</h3> 
           </Typography>
           <Typography gutterBottom variant="body2" component="div" mt={0} align="left">
            {element.name}
@@ -144,7 +144,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           $ {element.price}
           </Typography>   
           </CardContent>   
-          <NavLink to={`/react/shop/${element.id}`} className="none" ><Button  sx={{ml:"50%", mb: 2}} variant="contained" color='success'>
+          <NavLink to={`/react/shop/${element.id}`} className="none" ><Button  sx={{ml:"50%", mb: 2}} variant="contained" color='error'>
             Comprar
           </Button></NavLink> 
     </Card>
